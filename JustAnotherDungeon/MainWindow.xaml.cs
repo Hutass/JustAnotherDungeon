@@ -24,8 +24,9 @@ namespace JustAnotherDungeon
         {
             InitializeComponent();
             Dungeon dungeon = new Dungeon();
+            //Временный булщит
             dungeon.ReloadContent("C:\\Users\\Артём\\Desktop\\Dungeon");
-            test.Text = dungeon.LoadedContent.Rooms[0].Name.ToString();
+            test.Text = dungeon.LoadedContent[0].Rooms[0].Name.ToString();
         }
     }
 }
