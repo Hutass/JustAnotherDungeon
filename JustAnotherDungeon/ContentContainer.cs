@@ -86,6 +86,7 @@ namespace JustAnotherDungeon
     {
         public string Name;
         public string Description;
+        public int Health;
         public int Volume;
         public int Strenght;
         public int Dexterity;

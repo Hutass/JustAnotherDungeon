@@ -163,6 +163,7 @@ namespace JustAnotherDungeon
                             {
                                 Name = things[i],
                                 Description = things[Array.FindIndex(colNames, element => element == "MobDesc")],
+                                Health = Convert.ToInt32(things[Array.FindIndex(colNames, element => element == "MobHP")]),
                                 Volume = Convert.ToInt32(things[Array.FindIndex(colNames, element => element == "MobVolume")]),
                                 Strenght = stats[0],
                                 Dexterity = stats[1],

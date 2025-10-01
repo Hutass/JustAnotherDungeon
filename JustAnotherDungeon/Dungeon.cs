@@ -10,6 +10,24 @@ namespace JustAnotherDungeon
     internal class Dungeon
     {
         public List<ContentContainer> LoadedContent {  get; set; }
+        public List<ContentContainer> CurrentContentPool { get; set; }
+        public int Size { get; set; }
+        public int MaxItemsPerRoom { get; set; }
+        public int MaxMobsPerRoom { get; set; }
+        public int MaxEventsPerRoom { get; set; }
+        public double MobSpawnRate { get; set; }
+        public double EventSpawnRate { get; set; }
+
+        public Dungeon() 
+        {
+            LoadedContent = new List<ContentContainer>();
+            MaxItemsPerRoom = 1;
+            MaxMobsPerRoom = 1;
+            MaxEventsPerRoom = 1;
+            MobSpawnRate = 50;
+            EventSpawnRate = 50;
+            Size = 10;
+        }
 
         public void ReloadContent(string contentDirectoryPath)
         {
@@ -30,6 +48,10 @@ namespace JustAnotherDungeon
                     LoadedContent.Add(new FileExtractorTSV().ExtractFile(file));
                 }
             }
+        }
+        public void Generate()
+        {
+
         }
     }
 }
